@@ -289,8 +289,68 @@
 
         }
 
-    </script>
+        // custom defined objects
+        console.log("***********Custom Defined Objects***********")
 
+        // Basic Objects
+        // Numbers, Strings, Array, Date, and Math
+        var propName = "User Name";
+        var val = myObj["propName"];
+        var val1 = myObj["Other Name"];
+
+
+        // object instance ==> new + Constructor
+        var val2 = new Number ("5")
+
+        // get and set properties with the object name followed by a dot 
+        var val3 = myobj.name
+        myobj.name = "New Name"
+    
+        // use custom methods to change method functions on the object
+        var var4 = myObj.getName();
+        myObj.getName = function() {return this.val4; }
+
+        var obj = {
+            name: "myObject",
+            value: 7,
+            getValue: function() {return this.value; }
+        }
+        var user = {
+        first: 'Brendan',
+        last: 'Dayler',
+        getName: function() {return this.first + "" + this.last; }
+        };
+
+        function User(first, last) {
+            this.first = first;
+            this.last = last;
+            this.getName = function() { return this.first + "" + this.last;}}
+        var User = new User("Brendan", 'Dayley');
+        // Prototyping Object Pattern
+        
+        console.log(user.getName());
+        
+        function UserP(first, last) {
+            this.first = first;
+            this.last = last;
+        }
+        UserP.prototype = {
+            getFullName: function(){
+                return this.first + "" + this.last;
+            }
+        };
+
+        // manipulating strings 
+        console/log("*******\"Manipulating\"\"strings\"********")
+
+        // Commands to add characters
+        AddADoubleQuote; "This is an \"Example\" ",
+        AddASingleQuote; "This is another \'example\'",
+        AddABackslash; "One\\two\three",
+        AddANewLine; "I think\nTherfore\nI am"
+        
+    </script>
+        
 </body>
 
 </html>
